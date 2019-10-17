@@ -1,9 +1,0 @@
-{
-  "name": "Client",
-  "version": "1.0.0",
-  "description": "Personal Presentation",
-  "main": "index.js",
-  "author": "yuexu",
-  "license": "MIT",
-  "private": true
-}
