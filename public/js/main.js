@@ -87,6 +87,18 @@ function onClick(element) {
   else if( element.id === 'gallery'){
     document.getElementById("galleryModal").style.display = "block";
   }
+  else if( element.id === 'frontend'){
+    document.getElementById("frontModal").style.display = "block";
+  }
+  else if( element.id === 'backend'){
+    document.getElementById("backModal").style.display = "block";
+  }
+  else if( element.id === 'database'){
+    document.getElementById("dataModal").style.display = "block";
+  }
+  else if( element.id === 'style'){
+    document.getElementById("styleModal").style.display = "block";
+  }
 }
 
 //modal ends

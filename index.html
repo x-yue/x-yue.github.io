@@ -7,7 +7,7 @@
         <link rel="icon" href="public/favicon.ico" type="image/x-icon">
         <link rel="stylesheet" type="text/css" href="public/css/style.css">
         <link rel="stylesheet" type="text/css" href="public/css/main.css">
-        <link rel="stylesheet" type="text/css" href="public/css/normalize.css">
+        <link rel="stylesheet" type="text/css" href="public/css/normalize.css">        
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
         <script src="https://kit.fontawesome.com/60b8ff2feb.js" crossorigin="anonymous"></script>
@@ -18,229 +18,187 @@
     <!-- <body style='overflow-y: hidden' > -->
     <body>
 
-        <div id="loader-wrapper">
+        <!-- <div id="loader-wrapper">
             <div id="loader"></div>
             <div class="loader-section section-left"></div>
             <div class="loader-section section-right"></div>
-        </div>
+        </div> -->
 
         <div id="menubar" class="sidenav">
             <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
             <div id='block'>
                 <a href='#landing' onclick="closeNav()">Home</a>
-                <a href='#portfolio' onclick="closeNav()">Portfolio</a>
+                <a href='#about' onclick="closeNav()">About Me</a>
                 <a href='#tech' onclick="closeNav()">Tech</a>
+                <a href='#portfolio' onclick="closeNav()">Portfolio</a>
                 <a href='#contactme' onclick="closeNav()">Contact</a>
             </div>
         </div>
 
         <section id="landing">
-            <div align='right' id='menubutton'>
-                <span onclick="openNav()">Y.X.</span>
-            </div>
-            <div id='contain'>
-                <img id='profile' src='public/images/profile.jpg' alt='profile'>
-                <div style='margin-top:1vh;'>
-                    <div class="typewriter">
-                        <div class="typewriter-text">
-                            Hello, I am <b>Yue</b>, 
-                        </div>
-                    </div>
-                    <div class="typewriter">
-                        <div class="typewriter-text">
-                            <b></b>Full-Stack Developper
-                        </div>
-                    </div>
-                    <div class="typewriter">
-                        <div class="typewriter-text" style='color:#696969'>
-                            Location: Paris, France.
-                        </div>
-                    </div>
+            <div id='introduction' >
+                Hello, I am <b>Yue</b>, 
+                <br/>
+                <b>Full-Stack Developper</b>
+                <br/>
+                <div id='location'>
+                    Location: Paris, France
                 </div>
-                <div style='margin-left: 10vw;margin-top: 5vh'>
-                    <div class='textheader'>
-                        ABOUT ME
-                    </div>
-                    <div class='text'>
-                        <span>
-                            Student from <a target="_blank" href='https://www.42.fr/'><img id='icon42' src='https://www.42.us.org/wp-content/uploads/2017/07/logo.png' alt='42'></a>, specialized in <b>Web Development</b>.
-                        </span>
-                        <br/><br/>
-                        <span style='color: #696969'>
-                            &#9673; Available for freelance.
-                        </span>
-                    </div>
-                </div>
+                <br/>
+
+                <span id='span'>
+                    &#9673; <b>Available for freelance</b>
+                </span>
             </div>
-            <div align='right' style='margin-top: -15vh' >
-                <a id='nextpage' href="#portfolio">See Portfolio</a>
+            <div align='right' style='margin-top: 15vh'>
+                <a id='nextpage' href="#about">About Me</a>
             </div>
         </section>
 
-        <section id="portfolio">
-            <div class='title'>Portfolio</div>
-            <div>
-                <div style='display: inline-block'>
-                    <button onClick='onClick(this)' class='projects' id='hypertube'>
-                        <div class='headline'>Hypertube</div>
-                    </button>       
-                    <div class="modal" id="hpModal" onClick=this.style.display='none'>
-                        <div class="modal-content">
-                            <span class="close">&times;</span>
-                            <h2 style='font-size: 30px; color: white'>Hypertube</h2>
-                            <p class='description'>Video streaming website. </p>
-                            <p class='description'>Tech: Node.js, Express.js, React.js, MongoDB, Materiel-UI</p>
-                        </div>
-                    </div>  
-                </div>
-               
-                <div style='display: inline-block'>
-                    <button onClick='onClick(this)' class='projects' id='gallery'>
-                        <div class='headline'>Artist Gallery</div>
-                    </button>
-                    <div class="modal" id="galleryModal" onClick=this.style.display='none'>
-                        <div class="modal-content">
-                            <span  class="close">&times;</span>
-                            <h2 style='font-size: 30px; color: white'>Artist Gallery</h2>
-                            <p class='description'>Art piece display. </p>
-                            <p class='description'>Tech: Node.js, Express.js, Pug.js, Bootstrap</p>
-                        </div>
-                    </div>  
-                </div>
-                <div style='display: inline-block'>
-                    <button onClick='onClick(this)' class='projects' id='matcha'>
-                        <div class='headline'>Matcha</div>
-                    </button>    
-                    <div class="modal" id="matchaModal" onClick=this.style.display='none'>
-                        <div class="modal-content">
-                            <span class="close">&times;</span>
-                            <h2 style='font-size: 30px; color: white'>Matcha</h2>
-                            <p class='description'>Dating site.</p>
-                            <p class='description'>Tech: Node.js, Express.js,React.js, PostgreSQL, Bootstrap</p>
-                        </div>
-                    </div>  
-                </div>
+        <section id="about">
+            <div class='title'>About Me</div>
+
+            <div align='right' id='menubutton'>
+                <span onclick="openNav()">Y.X.</span>
             </div>
-            <div align='center'>
-                <a href="#tech">
-                    <i class="fas fa-angle-double-down fa-3x" id='downarraw'></i>
-                </a>
+            <div align='left'>
+                <div >
+                    <img id='profile' src='public/images/profile.jpg' alt='profile'>
+                </div>
+                <div id='aboutme'>
+                    <div class='text'>
+                        <span>
+                            Student from <a target="_blank" href='https://www.42.fr/'><img id='icon42' src='https://www.42.us.org/wp-content/uploads/2017/07/logo.png' alt='42'></a>, specialized in <b>Web Development</b>.
+                            <br/>
+                            <br/>
+                            <b>Finance & IT background</b>
+                            <br/>
+                            Various experience in Business Analysis, ERP System, Development, Audit, European VAT, Retail, Fashion, Event Organization ... 
+                            <br/>
+                            <br/>
+                            Work languages: English, French, Mandarin.
+                            <br/>
+                        </span>
+                        <br/>
+                    </div>
+                </div>
+                <div align='right' style='margin-top: -65vh;'>
+                    <a id='nextpage' href="#tech">Tech</a>
+                </div>
             </div>
         </section>
 
         <section id="tech">
             <div class='title'>Tech</div>
-            <div class="container">
-                <div align='left' class="mySlides"id='slide1'>
-                    <div style='display: block'>
-                        <div class='slide'>
-                            React.js
-                        </div>
-                        <div class='slide'>
-                            Pug.js
-                        </div> 
-                        <div class='slide'>
-                            HTML
-                        </div>
-                        <div class='empty-slide'></div>
-                        <div class='empty-slide'></div>
-
+            <div align='center' class="container">
+                <div style='display: inline-block'>
+                    <button onClick='onClick(this)' class='techs' id='frontend' >
+                        <div class='techbutton'>FrontEnd</div>
+                    </button>    
+                    <div class="modal" id="frontModal" onClick=this.style.display='none'>
+                        <div class="modal-content">
+                            <span class="close">&times;</span>
+                            <br/><br/>
+                            <h2>FrontEnd: React.js, Pug.js, HTML</h2>
+                       </div>
                     </div>
                 </div>
-                <div align='left' class="mySlides" id='slide2'>
-                    <div style='display: block' > 
-                        <div class='slide'>
-                            Node.js
+                <div style='display: inline-block'>
+                    <button onClick='onClick(this)' class='techs' id='backend' >
+                        <div class='techbutton'>BackEnd</div>
+                    </button>    
+                    <div class="modal" id="backModal" onClick=this.style.display='none'>
+                        <div class="modal-content">
+                            <span class="close">&times;</span>
+                            <br/><br/>
+                            <h2>BackEnd : Node.js, Expresse.js, PHP</h2>
                         </div>
-                        <div class='slide'>
-                            Express.js
-                        </div>
-                        <div class='slide'>
-                            PHP
-                        </div>
-                        <div class='empty-slide'></div>
-                        <div class='empty-slide'></div>
                     </div>
                 </div>
-                <div align='left' class="mySlides" id='slide3'>
-                    <div style='display: block'>
-                        <div class='slide'>
-                            PostgreSQL
+                <div style='display: inline-block'>
+                    <button onClick='onClick(this)' class='techs' id='database' >
+                        <div class='techbutton'>Database</div>
+                    </button>    
+                    <div class="modal" id="dataModal" onClick=this.style.display='none'>
+                        <div class="modal-content">
+                            <span class="close">&times;</span>
+                            <br/><br/>
+                            <h2>Database : MySQL, PostgreSQL, MongoDB</h2>
                         </div>
-                        <div class='slide'>
-                            MySQL
-                        </div>
-                        <div class='slide'>
-                            MongoDB
-                        </div>
-                        <div class='empty-slide'></div>
-                        <div class='empty-slide'></div>
                     </div>
                 </div>
-                <div align='left' class="mySlides" id='slide4'>
-                    <div style='display: block'>
-                        <div class='slide'>
-                            CSS
-                        </div>
-                        <div class='slide'>
-                            Bootstrap
-                        </div>
-                        <div class='slide'>
-                            Material-UI
-                        </div>
-                        <div class='slide'>
-                            Font Awesome
-                        </div>
-                        <div class='empty-slide'></div>
-                    </div>
-                </div>
-                <div align='left' class="mySlides" id='slide5'>
-                    <div style='display: block'>
-                        <div class='slide'>
-                            Postman
-                        </div>
-                        <div class='slide'>
-                            Heroku
-                        </div>
-                        <div class='slide'>
-                            Git
-                        </div>
-                        <div class='slide'>
-                            Docker
-                        </div>
-                        <div class='slide'>
-                            Yarn / NPM
+                <div style='display: inline-block'>
+                    <button onClick='onClick(this)' class='techs' id='style' >
+                        <div class='techbutton'>Style</div>
+                    </button>    
+                    <div class="modal" id="styleModal" onClick=this.style.display='none'>
+                        <div class="modal-content">
+                            <span class="close">&times;</span>
+                            <br/><br/>
+                            <h2>Style : CSS, Bootstrap, Material-UI, Font Awesome</h2>
                         </div>
                     </div>
-                </div>                
-                
-                <script> currentSlide(1) </script>
-                <div class="row">
-                    <div class="column">
-                        <span class='demo cursor' onclick="currentSlide(1)">F R O N T E N D</span>
-                    </div>
-                    <div class="column">
-                        <span class='demo cursor' onclick="currentSlide(2)">B A C K E N D</span>
-                    </div>
-                    <div class="column">
-                        <span class='demo cursor' onclick="currentSlide(3)">D A T A B A S E</span>
-                    </div>
-                    <div class="column">
-                        <span class='demo cursor' onclick="currentSlide(4)">S T Y L E</span>
-                    </div>
-                    <div class="column">
-                        <span class='demo cursor' onclick="currentSlide(5)">O T H E R</span>
-                    </div>
-                </div>
-
-            </div>
-
+                </div>  
+            </div>  
             <div align='center'>
-                <a href="#contactme">
+                <a href="#portfolio">
                     <i class="fas fa-angle-double-down fa-3x" id='downarraw'></i>
                 </a>
             </div>
         </section>
+
+        <section id="portfolio">
+                <div class='title'>Portfolio</div>
+                <div align='center'>
+                    <div style='display: inline-block'>
+                        <button onClick='onClick(this)' class='projects' id='hypertube'>
+                            <div class='headline'>Hypertube</div>
+                        </button>       
+                        <div class="modal" id="hpModal" onClick=this.style.display='none'>
+                            <div class="modal-content">
+                                <span class="close">&times;</span>
+                                <h2>Hypertube</h2>
+                                <p class='description'>Hypertube is a video streaming website.</p>
+                                <p class='description'>Users can search movies by name, production year, genre, and score. They can as well stream movies with subtitiles. The site in built in three languages - English, French and Spanish. Users can leave a comment under any movie, and "watched" movies are marked differently.</p>
+                                <p class='description'>Tech: Node.js, Express.js, React.js, MongoDB, Materiel-UI</p>
+                            </div>
+                        </div>  
+                    </div>
+                    <div style='display: inline-block'>
+                        <button onClick='onClick(this)' class='projects' id='gallery'>
+                            <div class='headline'>Gallery</div>
+                        </button>
+                        <div class="modal" id="galleryModal" onClick=this.style.display='none'>
+                            <div class="modal-content">
+                                <span  class="close">&times;</span>
+                                <h2>Artist Gallery</h2>
+                                <p class='description'>This website is made for the French artist <a style='text-decoration: underline; color: white;'target="_blank" href='https://www.mehal.net'>Sébastien Mehal</a>.</p>
+                                <p class='description'>The website is built in three languages (French, English and Mandarin), with different pages of presentation of the artist's work and concept, as well as a contact form for anyone to send him a message.</p>
+                                <p class='description'>Tech: Node.js, Express.js, Pug.js, Bootstrap</p>
+                            </div>
+                        </div>  
+                    </div>
+                    <div style='display: inline-block'>
+                        <button onClick='onClick(this)' class='projects' id='matcha'>
+                            <div class='headline'>Matcha</div>
+                        </button>    
+                        <div class="modal" id="matchaModal" onClick=this.style.display='none'>
+                            <div class="modal-content">
+                                <span class="close">&times;</span>
+                                <h2 >Matcha</h2>
+                                <p class='description'>Matcha is a classic dating website, provide users with a list appropriate candidates of future better half.</p>
+                                <p class='description'>User can like, unlike, block and report another user. We provide a matching score based on users' popularity.</p>
+                                <p class='description'>Tech: Node.js, Express.js,React.js, PostgreSQL, Bootstrap</p>
+                            </div>
+                        </div>  
+                    </div>
+                </div>
+                <div align='center'>
+                    <a href="#contactme">
+                        <i class="fas fa-angle-double-down fa-3x" id='downarraw'></i>
+                    </a>
+                </div>
+            </section>
 
         <section id="contactme">
             <div>

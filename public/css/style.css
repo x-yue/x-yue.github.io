@@ -23,26 +23,36 @@ a:hover {
 }
 
 
-#landing, #links, #aboutme, #portfolio, #tech {
+#landing, #about, #links, #aboutme, #portfolio, #tech {
     padding: 30px;
     height: 100vh;
 }
 
 .title {
-    color: #696969;
-    font-size: 3rem;
+    color: hsl(0, 0%, 41%);
+    font-size: 40px;
+    margin-top:-10px;
 }
 
 #nextpage {
     color : #696969;
     text-decoration: none;
-    font-size: 2rem;
+    font-size: 30px;
     margin-right: 5vw;
 }
 
 #nextpage:hover {
     color : #272626;
     text-decoration: none;
+}
+
+@media screen and (max-width: 480px) {
+    #nextpage {
+        font-size: 18px;
+    }
+    .title {
+        font-size: 2.5rem;
+    }
 }
 
 #downarraw {
@@ -59,87 +69,98 @@ a:hover {
     margin-top: 35vh;
 }
 
+.modal-content h2 {
+    font-size: 30px;
+    color: white;
+}
+
 
 /* landing page */
 #landing {
+    background-color: rgb(252,229,140);
+}
+
+#introduction {
+    color: rgb(68, 172, 172);
+    text-align: left;
+    display: inline-block;
+    width: 450px;
+    margin-top: 45vh;
+    margin-left: 12vw;
+    letter-spacing: 2px;
+    font-display: justify;
+    text-decoration: none;
+    font-size: 35px; 
+}
+
+#span {
+    color:#696969;
+    font-size: 30px;
+}
+
+#location {
+    font-size: 30px;
+}
+
+@media screen and (max-width: 480px) {
+    #introduction {
+        font-size: 25px;   
+        margin-left: 0;     
+    }
+    #location {
+        font-size: 25px;
+    }
+    #span {
+        font-size: 20px;
+    }
+}
+
+
+/* about me page */
+#about {
     transition: margin-left .5s;
-    padding: 30px;
     height: 100vh;
-    background: url('https://image.ibb.co/m3ZbRb/programmer.png') center fixed no-repeat;
     background-size: cover;
 }
 
-.topline {
-    color: white;
-    font-weight: bold;
-    font-size: 3rem;
+#aboutme {
+    margin-left: 10vw;
+    margin-top: 5vh;
 }
 
 #icon42 {
     height: 20px;
 }
 
-.textheader {
-    font-size: 20px;
-}
-
 .text {
-    font-size: 18px;
+    font-size: 20px;
     margin-top: 2vh;
-    text-align: justify;
-}
-
-#contain {
-    background-color: white;
-    width: 80vw;
-    height: 90vh;
-    margin-top: 10vh;
-    margin-left: 20vw;
-    border-top-left-radius: 5px;
 }
 
 #profile {
     width: 12vw;
-    min-width: 200px;
     border-radius: 50%;
-    margin-top: 3vh;
-    margin-left: 10vw;
+    margin-top: 15vh;
+    margin-left: 12vw;
     z-index: 100;
 }
 
-.typewriter {
-    display: inline-block;
-    width: 450px;
-    margin-left: 10vw;
-    font-display: justify;
-    text-decoration: none;
-}
-
-.typewriter-text {
-    display: inline-block;
-  	overflow: hidden;
-  	letter-spacing: 2px;
- 	animation: typing 2s steps(30, end), blink .75s step-end infinite;
-    white-space: nowrap;
-    font-size: 30px;
-    box-sizing: border-box;
-}
-
-@keyframes typing {
-    from { 
-        width: 0% 
+@media screen and (max-width: 480px) {
+    #profile {
+        width: 33vw;
+        margin-top: 15vh;
+        margin-left: 0vw;
     }
-    to { 
-        width: 100% 
+    #aboutme {
+        margin-top: 2vh;
+        margin-left: -5vw;
     }
-}
-
-@keyframes blink {
-    from, to { 
-        border-color: transparent 
+    .text {
+        font-size: 15px;
+        margin-top: 2vh;
     }
-    50% { 
-        border-color: black; 
+    #icon42 {
+        height: 15px;
     }
 }
 
@@ -177,6 +198,7 @@ a:hover {
     text-decoration: none;
 
 }
+
 .sidenav {
     height: 100%;
     width: 0;
@@ -224,10 +246,12 @@ s    .sidenav a {font-size: 18px;}
 /* portfolio */
 .projects {
     display: block;
-    height: 38vh;
+    height: 25vh;
     width: 45vw;
+    min-width: 300px;
     margin-top: 2vh;
-    margin-left: 30px;
+    margin-right: 2vw;
+    margin-left: 2vw;
     border-radius: 5px;
     color: white;
     opacity: .6;
@@ -251,6 +275,7 @@ s    .sidenav a {font-size: 18px;}
 
 .description {
     font-size: 15px;
+    text-align: left;
     font-style: justify;
     color : white;
 }
@@ -322,142 +347,82 @@ s    .sidenav a {font-size: 18px;}
 
 /* Tech */
 #tech {
-    background: url('../images/office-speaker-window-plant.jpg') center fixed no-repeat;
-
+    background: url('https://image.ibb.co/m3ZbRb/programmer.png') center fixed no-repeat;
     background-size: cover;
 }
 
-* {
-    box-sizing: border-box;
-  }
-  
-  img {
-    vertical-align: middle;
-  }
-  
-  .container {
-    position: relative;
-  }
-  
-  .mySlides {
-    display: none;
-  }
-  
-  .numbertext {
-    color: #f2f2f2;
-    font-size: 12px;
-    padding: 8px 12px;
-    position: absolute;
-    top: 0;
-  }
-  
-  .caption-container {
-    text-align: center;
-    background-color: #222;
-    padding: 2px 16px;
-    color: white;
-  }
-  
-  .row:after {
-    content: "";
-    display: table;
-    clear: both;
-  }
-  
-  .column {
-    float: left;
-    width: 20%;
-    padding: 20px;
-    text-align: center;
-    background-color: #f2f2f2;
-    vertical-align: 50%;
-    opacity: .6
-  }
-  
-  .column:hover {
-    background-color: #dadada;
-  }
-
-  .demo {
-      opacity: 0.6;
-      vertical-align: center;
-      margin-top: 10%;
-      padding: 20px;
-  }
-  
-  .active, .demo:hover {
-    opacity: 1;
-}
-  
-.mySlides {
-    display: none;
-    margin-top:5vh;
+#tech .title {
+    color : rgb(219, 218, 218);
 }
 
-.slide {
-    margin-bottom: 2.5vh;
-    text-align: left;
-    background-color: #8e8e8e;
-    opacity: .7;
-    width: 19vw;
-    height: 11vh;
-    vertical-align: middle;
-    text-align: center;
-    line-height: 10vh; 
+.techs {
+    display: block;
+    height: 19vh;
+    width: 45vw;
+    min-width: 300px;
+    margin-top: 1vh;
+    margin-right: 2vw;
+    margin-left: 2vw;
     border-radius: 5px;
     color: white;
+    opacity: .8;
     font-weight: bold;
-    font-size: 20px;
+    line-height: 25vh;
+    box-shadow: 2px 2px 3px #696969;
 }
 
-.slide:hover {
-    opacity: .9;
+.techs:hover {
+    opacity: 1.2;
 }
 
-.empty-slide {
-    margin-bottom: 2.5vh;
+.techs::after {
+    border: none;
+}
+
+.techbutton {
+    margin-top: -3vh;
+    font-size: 45px;
+    text-shadow: 2px 2px 3px #696969;
+}
+
+.description {
+    font-size: 15px;
     text-align: left;
-    height: 5vh;
-    background-color: transparent;
-    width: 19vw;
-    height: 11vh;
-    vertical-align: middle;
-    text-align: center;
-    line-height: 10vh; 
-    border-radius: 5px;
-    color: white;
-    font-weight: bold;
-    font-size: 20px;
-    text-shadow: 1px 1px 2px beige;
-    opacity:0;
+    font-style: justify;
+    color : white;
 }
 
-#slide2{
-    margin-left: 20%;
+#frontend {
+    background: url('../images/frontend.jpg') no-repeat;
+    background-size: cover;
 }
 
-#slide3{
-    margin-left: 40%;
+#backend {
+    background: url('../images/backend.jpg') no-repeat;
+    background-size: cover;
 }
 
-#slide4{
-    margin-left: 60%;
+#database {
+    background: url('../images/database.jpg') no-repeat;
+    background-size: cover;
 }
 
-#slide5{
-    margin-left: 80%;
+#style {
+    background: url('../images/style.jpg') no-repeat;
+    background-size: cover;
 }
 
 /* contact me */
+#contactme {
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
 #icons {
     padding: 70px, 0;
     text-align: center;
     margin-top: 5vh;
     margin-bottom: 5vh;
-}
-
-#contactme {
-    margin-left: 20px;
 }
 
 .contact-icon {
@@ -468,6 +433,16 @@ s    .sidenav a {font-size: 18px;}
 #email-icon {
     height: 47px;
     margin-left: 14px;
+}
+
+
+@media screen and (max-width: 480px) {
+    .contact-icon {
+        height: 35px;
+    }
+    #email-icon {
+        height: 36px;
+    }
 }
 
 /* copyright */
