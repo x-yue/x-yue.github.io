@@ -48,7 +48,7 @@ a:hover {
 
 @media screen and (max-width: 480px) {
     #nextpage {
-        font-size: 18px;
+        font-size: 20px;
     }
     .title {
         font-size: 2.5rem;
@@ -104,11 +104,11 @@ a:hover {
 
 @media screen and (max-width: 480px) {
     #introduction {
-        font-size: 25px;   
+        font-size: 23px;   
         margin-left: 0;     
     }
     #location {
-        font-size: 25px;
+        font-size: 23px;
     }
     #span {
         font-size: 20px;
