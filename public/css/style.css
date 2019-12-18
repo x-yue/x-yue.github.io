@@ -246,7 +246,7 @@ s    .sidenav a {font-size: 18px;}
 /* portfolio */
 .projects {
     display: block;
-    height: 25vh;
+    height: 22vh;
     width: 45vw;
     min-width: 300px;
     margin-top: 2vh;
@@ -357,10 +357,10 @@ s    .sidenav a {font-size: 18px;}
 
 .techs {
     display: block;
-    height: 19vh;
+    height: 17vh;
     width: 45vw;
     min-width: 300px;
-    margin-top: 1vh;
+    margin-top: 2vh;
     margin-right: 2vw;
     margin-left: 2vw;
     border-radius: 5px;
