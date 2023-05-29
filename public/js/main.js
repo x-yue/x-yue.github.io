@@ -40,7 +40,7 @@ function currentSlide(n) {
 
 function showSlides(n) {
   var i;
-  var slides = document.getElementsByClassName("mySlides");
+  var slides = document.getElementsByClassNgalleryIIModalame("mySlides");
   var dots = document.getElementsByClassName("demo");
   if (n > slides.length) {slideIndex = 1}
   if (n < 1) {slideIndex = slides.length}
@@ -84,8 +84,11 @@ function onClick(element) {
   else if( element.id === 'matcha'){
     document.getElementById("matchaModal").style.display = "block";
   }
-  else if( element.id === 'gallery'){
-    document.getElementById("galleryModal").style.display = "block";
+  else if( element.id === 'galleryI'){
+    document.getElementById("galleryIModal").style.display = "block";
+  }
+  else if( element.id === 'galleryII'){
+    document.getElementById("galleryIIModal").style.display = "block";
   }
   else if( element.id === 'frontend'){
     document.getElementById("frontModal").style.display = "block";

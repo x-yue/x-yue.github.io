@@ -281,10 +281,16 @@ s    .sidenav a {font-size: 18px;}
     color : white;
 }
 
-#gallery {
-    background: url('../images/gallery.png') no-repeat;
+#galleryI {
+    background: url('../images/galleryI.png') no-repeat;
     background-size: cover;
 }
+
+#galleryII {
+    background: url('../images/galleryII.jpg') no-repeat;
+    background-size: cover;
+}
+
 
 #matcha {
     background: url('../images/matcha.png') no-repeat;
